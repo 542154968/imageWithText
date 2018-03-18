@@ -7,7 +7,9 @@
             </li>
         </ul>
         <div class="null" v-else>
-            快添加文字或照片吧
+            <p>快添加文字或照片吧</p>
+            <p>移动端图片太多太大可能会导致无法生成</p>
+            <p>请删减修改后再生成</p>
         </div>
         <div class="helper"></div>
         <div class="fixed-nav">
@@ -123,7 +125,7 @@ export default {
         getFile( event ){
             let files = event.target.files,
                 l = files.length,
-                _this = this;
+                _this = this;    
             for( let i = 0; i < l; i++ ){
                 if( this.imgReg.test( files[i].name ) ){
                     let reader = new FileReader();
@@ -168,21 +170,22 @@ export default {
 </script>
 
 <style lang="stylus">
-.list
+.list, .list ul
     width 100%
     li
+        width 100%
         margin 0 auto
         padding 0 0 15px
         &:last-child
             padding-bottom 0
-    .text
+        img
+            width 100%    
+    li.text
         width 100%
         text-align center
         p
             line-height 24px
             font-size 16px
-    img
-        width 100%
     .helper
         height 45px    
     .fixed-nav
@@ -216,5 +219,7 @@ export default {
         color #3385ff
         font-size 16px
         font-weight bold
-        margin-top 30%               
+        margin-top 25%
+        p
+            padding 20px 0               
 </style>
