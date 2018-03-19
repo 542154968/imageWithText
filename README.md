@@ -1,7 +1,7 @@
 # 在线图片文字上下拼合工具
 
 **使用地址**
-https://542154968.github.io/imageWithText/#
+- https://542154968.github.io/imageWithText/#
 
 **技术栈**
 - vue-cli
